@@ -1,24 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TableTest from './pages/index';
 
+interface DataType {
+  key: React.Key;
+  name: string;
+  time: [string, string] | null;
+  note: string;
+}
 function App() {
+  const dataSource: DataType[] = [{
+    key: '1',
+    name: 'banci1',
+    time: ['08:00', '09:00'],
+    note: 'string'
+  }];
+  
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <TableTest></TableTest>
     </div>
   );
 }
